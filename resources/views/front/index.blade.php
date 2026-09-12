@@ -72,16 +72,8 @@
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.ico">
 
-    <!-- Plugins CSS -->
-    <link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
-    <link rel="stylesheet" type="text/css" href="assets/vendor/tiny-slider/tiny-slider.css">
-    <link rel="stylesheet" type="text/css" href="assets/vendor/plyr/plyr.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-
-    <!-- Theme CSS -->
-    <link id="style-switch" rel="stylesheet" type="text/css" href="assets/css/style-rtl.css">
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 
 
     <style>
@@ -137,7 +129,8 @@
                         <li
                             class="nav-item offcanvas-social-icon d-flex justify-content-center align-items-center ms-3 bg-light">
                             <a class="nav-link d-flex" href="#"><i class="fab fa-telegram fa-fw"
-                                    style="font-size: 22px;"></i></a></li>
+                                    style="font-size: 22px;"></i></a>
+                        </li>
                         <li
                             class="nav-item offcanvas-social-icon d-flex justify-content-center align-items-center ms-3 bg-light">
                             <a class="nav-link d-flex" href="#"><i class="fab fa-instagram fa-fw"
@@ -146,7 +139,8 @@
                         <li
                             class="nav-item offcanvas-social-icon d-flex justify-content-center align-items-center ms-3 bg-light">
                             <a class="nav-link d-flex" href="#"><i class="fab fa-linkedin fa-fw"
-                                    style="font-size: 22px;"></i></a></li>
+                                    style="font-size: 22px;"></i></a>
+                        </li>
                     </ul>
                 </div>
                 <div class="my-4">
@@ -431,7 +425,8 @@ Main hero START -->
                                         <h2
                                             class="w-100 rounded px-3 py-3 slider-topic-title position-absolute bottom-0">
                                             <a class="text-white" href="post-single-4.html" class="">ده نشانه
-                                                نسل جدید هدست های واقعیت مجازی سونی</a></h2>
+                                                نسل جدید هدست های واقعیت مجازی سونی</a>
+                                        </h2>
                                     </div>
                                 </div>
                             </div>
@@ -465,7 +460,8 @@ Main hero START -->
                                         <h2
                                             class="w-100 rounded px-3 py-3 slider-topic-title position-absolute bottom-0">
                                             <a class="text-white" href="post-single-4.html" class="">ده نشانه
-                                                نسل جدید هدست های واقعیت مجازی سونی</a></h2>
+                                                نسل جدید هدست های واقعیت مجازی سونی</a>
+                                        </h2>
                                     </div>
                                 </div>
                             </div>
@@ -498,7 +494,8 @@ Main hero START -->
                                         <h2
                                             class="w-100 rounded px-3 py-3 slider-topic-title position-absolute bottom-0">
                                             <a class="text-white" href="post-single-4.html" class="">ده نشانه
-                                                نسل جدید هدست های واقعیت مجازی سونی</a></h2>
+                                                نسل جدید هدست های واقعیت مجازی سونی</a>
+                                        </h2>
                                     </div>
                                 </div>
                             </div>
@@ -1529,17 +1526,10 @@ Footer END -->
     <!-- =======================
 JS libraries, plugins and custom scripts -->
 
-    <!-- Bootstrap JS -->
-    <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Vendors -->
-    <script src="assets/vendor/tiny-slider/tiny-slider-rtl.js"></script>
-
-    <script src="assets/vendor/plyr/plyr.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <!-- Template Functions -->
-    <script src="assets/js/functions.js"></script>
+
     <script>
     const swiper = new Swiper('.swiper', {
         // Optional parameters
