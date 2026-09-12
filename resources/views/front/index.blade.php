@@ -74,8 +74,8 @@
 
 
     @vite(["resources/assets/css/app.css", "resources/assets/js/app.js"])
-
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
     <style>
     .swiper {
         width: 100%;
@@ -108,8 +108,8 @@
         </div>
         <div class="offcanvas-body d-flex flex-column pt-0">
             <div>
-                <img class="light-mode-item my-3" src="assets/images/logo.svg" alt="logo">
-                <img class="dark-mode-item my-3" src="assets/images/logo-light.svg" alt="logo">
+                <img class="light-mode-item my-3" src="{{Vite::image('logo.svg')}}" alt="logo">
+                <img class="dark-mode-item my-3" src="{{Vite::image('logo-light.svg')}}" alt="logo">
                 <p style="line-height: 2;">موضوع وبلاگ، اخبار و مجله نسل بعدی برای شما برای شروع به اشتراک گذاری داستان
                     های خود از امروز! </p>
                 <!-- Nav START -->
@@ -123,7 +123,7 @@
                 <!-- Nav END -->
                 <p class="text-center">پروفایل</p>
                 <div class="d-flex flex-column justify-content-center align-items-center">
-                    <img class="offcanvas-avatar avatar-img p-1 mb-2" src="assets/images/avatar/vahid.jpeg" alt="">
+                    <img class="offcanvas-avatar avatar-img p-1 mb-2" src="{{Vite::image('avatar/vahid.jpeg')}}" alt="">
                     <p class="fw-bold" style="font-size: 17px;">وحید صالحی</p>
                     <ul class="nav d-flex flex-row-reverse justify-content-around">
                         <li
@@ -180,8 +180,8 @@ Header START -->
             <div class="container">
                 <!-- Logo START -->
                 <a class="navbar-brand" href="index.html">
-                    <img class="navbar-brand-item light-mode-item" src="assets/images/logo.svg" alt="logo">
-                    <img class="navbar-brand-item dark-mode-item" src="assets/images/logo-light.svg" alt="logo">
+                    <img class="navbar-brand-item light-mode-item" src="{{Vite::image('logo.svg')}}" alt="logo">
+                    <img class="navbar-brand-item dark-mode-item" src="{{Vite::image('logo-light.svg')}}" alt="logo">
                 </a>
                 <!-- Logo END -->
 
@@ -375,7 +375,7 @@ Trending START -->
 							data-arrow="true"
 							data-dots="false"
 							data-items="1">
-							<!-- Slider items
+							 Slider items
 							<div> <a href="#" class="text-reset btn-link">افزایش آلودگی هوا در شهرهای پُرجمعیت تا فردا</a></div>
 							<div> <a href="#" class="text-reset btn-link">حضورمسیحیان در حرم سامرابا آغاز سال جدید </a></div>
 							<div> <a href="#" class="text-reset btn-link">انتقاد ستاره رئال از شعارهای نژادپرستانه </a></div>
@@ -383,7 +383,7 @@ Trending START -->
 					</div> -->
                         </div>
                     </div>
-                </div> <!-- Row END -->
+                </div>
             </div>
         </section>
         <!-- =======================
@@ -400,7 +400,7 @@ Main hero START -->
                         <!-- Slides -->
                         <div class="swiper-slide  ">
                             <div class="card card-overlay-bottom card-grid-lg card-bg-scale">
-                                <img class="img-fluid" src="./assets/images/blog/1by1/01.jpg" alt="">
+                                <img class="img-fluid" src=" {{Vite::image('blog/1by1/01.jpg')}}" alt="">
                                 <!-- Card featured -->
                                 <!-- <span class="card-featured" title=""><i class="fas fa-star"></i></span> -->
                                 <!-- Card Image overlay -->
@@ -417,7 +417,7 @@ Main hero START -->
                                         <div class="text-white position-absolute" style="bottom: 57px;right: 13px;">
                                             <div class="avatar avatar-sm">
                                                 <img class="avatar-img rounded-circle"
-                                                    src="assets/images/avatar/vahid.jpeg" alt="avatar">
+                                                    src=" {{Vite::image('avatar/vahid.jpeg')}} " alt="avatar">
                                             </div>
                                             <span class="ms-1"><a href="#"
                                                     class="stretched-link text-reset btn-link">وحید صالحی</a></span>
@@ -434,7 +434,7 @@ Main hero START -->
                         </div>
                         <div class="swiper-slide  ">
                             <div class="card card-overlay-bottom card-grid-lg card-bg-scale">
-                                <img class="img-fluid" src="./assets/images/blog/1by1/01.jpg" alt="">
+                                <img class="img-fluid" src="  {{Vite::image('blog/1by1/01.jpg')}}" alt="">
                                 <!-- Card featured -->
                                 <!-- <span class="card-featured" title=""><i class="fas fa-star"></i></span> -->
                                 <!-- Card Image overlay -->
@@ -452,7 +452,7 @@ Main hero START -->
                                         <div class="text-white position-absolute" style="bottom: 57px;right: 13px;">
                                             <div class="avatar avatar-sm">
                                                 <img class="avatar-img rounded-circle"
-                                                    src="assets/images/avatar/vahid.jpeg" alt="avatar">
+                                                    src=" {{Vite::image('avatar/vahid.jpeg')}}" alt="avatar">
                                             </div>
                                             <span class="ms-1"><a href="#"
                                                     class="stretched-link text-reset btn-link">وحید صالحی</a></span>
@@ -469,7 +469,7 @@ Main hero START -->
                         </div>
                         <div class="swiper-slide  ">
                             <div class="card card-overlay-bottom card-grid-lg card-bg-scale">
-                                <img class="img-fluid" src="./assets/images/blog/1by1/01.jpg" alt="">
+                                <img class="img-fluid" src=" {{Vite::image('blog/1by1/01.jpg')}}" alt="">
                                 <!-- Card featured -->
                                 <!-- Card Image overlay -->
                                 <div class="card-img-overlay">
@@ -486,7 +486,7 @@ Main hero START -->
                                         <div class="text-white position-absolute" style="bottom: 57px;right: 13px;">
                                             <div class="avatar avatar-sm">
                                                 <img class="avatar-img rounded-circle"
-                                                    src="assets/images/avatar/vahid.jpeg" alt="avatar">
+                                                    src=" {{Vite::image('avatar/vahid.jpeg')}}" alt="avatar">
                                             </div>
                                             <span class="ms-1"><a href="#"
                                                     class="stretched-link text-reset btn-link">وحید صالحی</a></span>
@@ -577,7 +577,7 @@ Main hero START -->
                     <div class="col-md-6 card mb-3">
                         <div class="d-flex p-3"
                             style="box-shadow: 0px 5px 20px 0px rgba(69, 67, 96, 0.1);border-radius: .7rem;">
-                            <img class="rounded w-25" src="assets/images/blog/4by3/thumb/01.jpg" alt="">
+                            <img class="rounded w-25" src=" {{Vite::image('blog/4by3/thumb/01.jpg')}}" alt="">
                             <div class="d-flex flex-column justify-content-center ms-4">
                                 <h6><a href="post-single-2.html" class="">خرید و فروش ارز در کانال
                                         37 هزار تومانی</a></h6>
@@ -588,7 +588,7 @@ Main hero START -->
                     </div>
                     <div class="col-md-6 card mb-3">
                         <div class="d-flex p-3" style="box-shadow: 0px 2px 10px 0px #555f6921;border-radius: .7rem;">
-                            <img class="rounded w-25" src="assets/images/blog/4by3/thumb/01.jpg" alt="">
+                            <img class="rounded w-25" src=" {{Vite::image('blog/4by3/thumb/01.jpg')}} " alt="">
                             <div class="d-flex flex-column justify-content-center ms-4">
                                 <h6><a href="post-single-2.html" class="">خرید و فروش ارز در کانال
                                         37 هزار تومانی</a></h6>
@@ -599,7 +599,7 @@ Main hero START -->
                     </div>
                     <div class="col-md-6 card mb-3">
                         <div class="d-flex p-3" style="box-shadow: 0px 2px 10px 0px #555f6921;border-radius: .7rem;">
-                            <img class="rounded w-25" src="assets/images/blog/4by3/thumb/01.jpg" alt="">
+                            <img class="rounded w-25" src=" {{Vite::image('blog/4by3/thumb/01.jpg')}}" alt="">
                             <div class="d-flex flex-column justify-content-center ms-4">
                                 <h6><a href="post-single-2.html" class="">خرید و فروش ارز در کانال
                                         37 هزار تومانی</a></h6>
@@ -610,7 +610,7 @@ Main hero START -->
                     </div>
                     <div class="col-md-6 card mb-3">
                         <div class="d-flex p-3" style="box-shadow: 0px 2px 10px 0px #555f6921;border-radius: .7rem;">
-                            <img class="rounded w-25" src="assets/images/blog/4by3/thumb/01.jpg" alt="">
+                            <img class="rounded w-25" src=" {{Vite::image('blog/4by3/thumb/01.jpg')}}" alt="">
                             <div class="d-flex flex-column justify-content-center ms-4">
                                 <h6><a href="post-single-2.html" class="">خرید و فروش ارز در کانال
                                         37 هزار تومانی</a></h6>
@@ -639,7 +639,7 @@ Main hero START -->
                     <!-- Left big card -->
                     <div class="col-lg-6">
                         <div class="card card-overlay-bottom  card-bg-scale">
-                            <img class="img-fluid h-100" src="./assets/images/blog/1by1/01.jpg" alt="">
+                            <img class="img-fluid h-100" src=" {{Vite::image('blog/1by1/01.jpg')}} " alt="">
                             <!-- Card featured -->
                             <span class="card-featured" title=""><i class="fas fa-star"></i></span>
                             <!-- Card Image overlay -->
@@ -664,7 +664,7 @@ Main hero START -->
                                                 <div class="d-flex align-items-center text-white position-relative">
                                                     <div class="avatar avatar-sm">
                                                         <img class="avatar-img rounded-circle"
-                                                            src="assets/images/avatar/vahid.jpeg" alt="avatar">
+                                                            src=" {{Vite::image('avatar/vahid.jpeg')}}" alt="avatar">
                                                     </div>
                                                     <span class="ms-3"> <a href="#"
                                                             class="stretched-link text-reset btn-link">وحید
@@ -793,7 +793,7 @@ Main hero START -->
                                 <!-- Card img -->
                                 <div class="position-relative">
                                     <img class="card-img" style="margin-top: -60px;"
-                                        src="assets/images/blog/4by3/01.jpg" alt="Card image">
+                                        src=" {{Vite::image('blog/4by3/01.jpg')}} " alt="Card image">
                                     <div class="card-img-overlay d-flex align-items-start flex-column p-3">
                                         <!-- Card overlay bottom -->
                                         <div class="w-100 mt-auto">
@@ -824,7 +824,7 @@ Main hero START -->
                                                 <div class="d-flex align-items-center position-relative">
                                                     <div class="avatar avatar-xs">
                                                         <img class="avatar-img rounded-circle"
-                                                            src="assets/images/avatar/vahid.jpeg" alt="avatar">
+                                                            src=" {{Vite::image('avatar/vahid.jpeg')}}" alt="avatar">
                                                     </div>
                                                     <span class="ms-3"><a href="#"
                                                             class="stretched-link text-reset btn-link"></a></span>
@@ -842,7 +842,7 @@ Main hero START -->
                                 <!-- Card img -->
                                 <div class="position-relative">
                                     <img class="card-img" style="margin-top: -60px;"
-                                        src="assets/images/blog/4by3/01.jpg" alt="Card image">
+                                        src=" {{Vite::image('blog/4by3/01.jpg')}} " alt="Card image">
                                     <div class="card-img-overlay d-flex align-items-start flex-column p-3">
                                         <!-- Card overlay bottom -->
                                         <div class="w-100 mt-auto">
@@ -874,7 +874,7 @@ Main hero START -->
                                                 <div class="d-flex align-items-center position-relative">
                                                     <div class="avatar avatar-xs">
                                                         <img class="avatar-img rounded-circle"
-                                                            src="assets/images/avatar/vahid.jpeg" alt="avatar">
+                                                            src=" {{Vite::image('avatar/vahid.jpeg')}}" alt="avatar">
                                                     </div>
                                                     <span class="ms-3"><a href="#"
                                                             class="stretched-link text-reset btn-link">وحید
@@ -893,7 +893,7 @@ Main hero START -->
                                 <!-- Card img -->
                                 <div class="position-relative">
                                     <img class="card-img" style="margin-top: -60px;"
-                                        src="assets/images/blog/4by3/01.jpg" alt="Card image">
+                                        src=" {{Vite::image('blog/4by3/01.jpg')}} " alt="Card image">
                                     <div class="card-img-overlay d-flex align-items-start flex-column p-3">
                                         <!-- Card overlay bottom -->
                                         <div class="w-100 mt-auto">
@@ -925,7 +925,7 @@ Main hero START -->
                                                 <div class="d-flex align-items-center position-relative">
                                                     <div class="avatar avatar-xs">
                                                         <img class="avatar-img rounded-circle"
-                                                            src="assets/images/avatar/vahid.jpeg" alt="avatar">
+                                                            src=" {{Vite::image('avatar/vahid.jpeg')}} " alt="avatar">
                                                     </div>
                                                     <span class="ms-3"><a href="#"
                                                             class="stretched-link text-reset btn-link">وحید
@@ -965,7 +965,7 @@ Main hero START -->
                                 <!-- Card img -->
                                 <div class="position-relative">
                                     <img class="card-img" style="margin-top: -60px;"
-                                        src="assets/images/blog/4by3/01.jpg" alt="Card image">
+                                        src=" {{Vite::image('blog/4by3/01.jpg')}} " alt="Card image">
                                     <div class="card-img-overlay d-flex align-items-start flex-column p-3">
                                         <!-- Card overlay bottom -->
                                         <div class="w-100 mt-auto">
@@ -998,7 +998,7 @@ Main hero START -->
                                                 <div class="d-flex align-items-center position-relative">
                                                     <div class="avatar avatar-xs">
                                                         <img class="avatar-img rounded-circle"
-                                                            src="assets/images/avatar/vahid.jpeg" alt="avatar">
+                                                            src=" {{Vite::image('avatar/vahid.jpeg')}} " alt="avatar">
                                                     </div>
                                                     <span class="ms-3"><a href="#"
                                                             class="stretched-link text-reset btn-link">وحید
@@ -1017,7 +1017,7 @@ Main hero START -->
                                 <!-- Card img -->
                                 <div class="position-relative">
                                     <img class="card-img" style="margin-top: -60px;"
-                                        src="assets/images/blog/4by3/01.jpg" alt="Card image">
+                                        src=" {{Vite::image('blog/4by3/01.jpg')}} assets/images/" alt="Card image">
                                     <div class="card-img-overlay d-flex align-items-start flex-column p-3">
                                         <!-- Card overlay bottom -->
                                         <div class="w-100 mt-auto">
@@ -1051,7 +1051,7 @@ Main hero START -->
                                                 <div class="d-flex align-items-center position-relative">
                                                     <div class="avatar avatar-xs">
                                                         <img class="avatar-img rounded-circle"
-                                                            src="assets/images/avatar/vahid.jpeg" alt="avatar">
+                                                            src=" {{Vite::image('avatar/vahid.jpeg')}} " alt="avatar">
                                                     </div>
                                                     <span class="ms-3"><a href="#"
                                                             class="stretched-link text-reset btn-link">وحید
@@ -1070,7 +1070,7 @@ Main hero START -->
                                 <!-- Card img -->
                                 <div class="position-relative">
                                     <img class="card-img" style="margin-top: -60px;"
-                                        src="assets/images/blog/4by3/01.jpg" alt="Card image">
+                                        src=" {{Vite::image('blog/4by3/01.jpg')}}" alt="Card image">
                                     <div class="card-img-overlay d-flex align-items-start flex-column p-3">
                                         <!-- Card overlay bottom -->
                                         <div class="w-100 mt-auto">
@@ -1104,7 +1104,7 @@ Main hero START -->
                                                 <div class="d-flex align-items-center position-relative">
                                                     <div class="avatar avatar-xs">
                                                         <img class="avatar-img rounded-circle"
-                                                            src="assets/images/avatar/vahid.jpeg" alt="avatar">
+                                                            src=" {{Vite::image('avatar/vahid.jpeg')}} " alt="avatar">
                                                     </div>
                                                     <span class="ms-3"><a href="#"
                                                             class="stretched-link text-reset btn-link">وحید
@@ -1142,15 +1142,16 @@ Main hero START -->
                             <!-- <a href="#" class="text-body small"><u>مشاهده همه</u></a> -->
                         </div>
                         <div class="tiny-slider arrow-hover arrow-blur arrow-dark arrow-round">
-                            <div class="tiny-slider-inner" data-autoplay="true" data-hoverpause="true" data-gutter="24"
-                                data-arrow="true" data-dots="false" data-items-xl="4" data-items-md="3"
-                                data-items-sm="2" data-items-xs="1">
+                            <div class="tiny-slider-inner" style="float: left;" data-autoplay="true"
+                                data-hoverpause="true" data-gutter="24" data-arrow="true" data-dots="false"
+                                data-items-xl="4" data-items-md="3" data-items-sm="2" data-items-xs="1">
 
                                 <!-- Card item START -->
                                 <div class="card">
                                     <!-- Card img -->
                                     <div class="position-relative">
-                                        <img class="card-img" src="assets/images/blog/4by3/07.jpg" alt="Card image">
+                                        <img class="card-img" src=" {{Vite::image('blog/4by3/07.jpg')}} "
+                                            alt="Card image">
                                         <div class="card-img-overlay d-flex align-items-start flex-column p-3">
                                             <!-- Card overlay Top -->
                                             <div class="w-100 mb-auto d-flex justify-content-end">
@@ -1178,7 +1179,8 @@ Main hero START -->
                                                     <div class="d-flex align-items-center position-relative">
                                                         <div class="avatar avatar-xs">
                                                             <img class="avatar-img rounded-circle"
-                                                                src="assets/images/avatar/vahid.jpeg" alt="avatar">
+                                                                src=" {{Vite::image('avatar/vahid.jpeg')}}  "
+                                                                alt="avatar">
                                                         </div>
                                                         <span class="ms-3"><a href="#"
                                                                 class="stretched-link text-reset btn-link">وحید
@@ -1195,7 +1197,8 @@ Main hero START -->
                                 <div class="card">
                                     <!-- Card img -->
                                     <div class="position-relative">
-                                        <img class="card-img" src="assets/images/blog/4by3/08.jpg" alt="Card image">
+                                        <img class="card-img" src=" {{Vite::image('blog/4by3/08.jpg')}}"
+                                            alt="Card image">
                                         <div class="card-img-overlay d-flex align-items-start flex-column p-3">
                                             <!-- Card overlay bottom -->
                                             <div class="w-100 mt-auto">
@@ -1216,7 +1219,8 @@ Main hero START -->
                                                         <div class="avatar avatar-xs">
                                                             <div class="avatar-img rounded-circle">
                                                                 <img class="avatar-img rounded-circle"
-                                                                    src="assets/images/avatar/vahid.jpeg" alt="avatar">
+                                                                    src=" {{Vite::image('avatar/vahid.jpeg')}}"
+                                                                    alt="avatar">
                                                             </div>
                                                         </div>
                                                         <span class="ms-3"><a href="#"
@@ -1234,7 +1238,8 @@ Main hero START -->
                                 <div class="card">
                                     <!-- Card img -->
                                     <div class="position-relative">
-                                        <img class="card-img" src="assets/images/blog/4by3/09.jpg" alt="Card image">
+                                        <img class="card-img" src=" {{Vite::image('blog/4by3/09.jpg')}}"
+                                            alt="Card image">
                                         <div class="card-img-overlay d-flex align-items-start flex-column p-3">
                                             <!-- Card overlay bottom -->
                                             <div class="w-100 mt-auto">
@@ -1254,7 +1259,8 @@ Main hero START -->
                                                     <div class="d-flex align-items-center position-relative">
                                                         <div class="avatar avatar-xs">
                                                             <img class="avatar-img rounded-circle"
-                                                                src="assets/images/avatar/vahid.jpeg" alt="avatar">
+                                                                src=" {{Vite::image('avatar/vahid.jpeg')}} "
+                                                                alt="avatar">
                                                         </div>
                                                         <span class="ms-3"><a href="#"
                                                                 class="stretched-link text-reset btn-link">وحید
@@ -1271,7 +1277,8 @@ Main hero START -->
                                 <div class="card">
                                     <!-- Card img -->
                                     <div class="position-relative">
-                                        <img class="card-img" src="assets/images/blog/4by3/10.jpg" alt="Card image">
+                                        <img class="card-img" src=" {{Vite::image('blog/4by3/10.jpg')}}"
+                                            alt="Card image">
                                         <div class="card-img-overlay d-flex align-items-start flex-column p-3">
                                             <!-- Card overlay Top -->
                                             <div class="w-100 mb-auto d-flex justify-content-end">
@@ -1299,7 +1306,8 @@ Main hero START -->
                                                     <div class="d-flex align-items-center position-relative">
                                                         <div class="avatar avatar-xs">
                                                             <img class="avatar-img rounded-circle"
-                                                                src="assets/images/avatar/vahid.jpeg" alt="avatar">
+                                                                src=" {{Vite::image('avatar/vahid.jpeg')}} "
+                                                                alt="avatar">
                                                         </div>
                                                         <span class="ms-3"><a href="#"
                                                                 class="stretched-link text-reset btn-link">وحید
@@ -1316,7 +1324,8 @@ Main hero START -->
                                 <div class="card">
                                     <!-- Card img -->
                                     <div class="position-relative">
-                                        <img class="card-img" src="assets/images/blog/4by3/11.jpg" alt="Card image">
+                                        <img class="card-img" src=" {{Vite::image('blog/4by3/11.jpg')}}"
+                                            alt="Card image">
                                         <div class="card-img-overlay d-flex align-items-start flex-column p-3">
                                             <!-- Card overlay bottom -->
                                             <div class="w-100 mt-auto">
@@ -1336,7 +1345,8 @@ Main hero START -->
                                                     <div class="d-flex align-items-center position-relative">
                                                         <div class="avatar avatar-xs">
                                                             <img class="avatar-img rounded-circle"
-                                                                src="assets/images/avatar/vahid.jpeg" alt="avatar">
+                                                                src=" {{Vite::image('avatar/vahid.jpeg')}} "
+                                                                alt="avatar">
                                                         </div>
                                                         <span class="ms-3"><a href="#"
                                                                 class="stretched-link text-reset btn-link">وحید
@@ -1434,10 +1444,11 @@ Section END -->
                         کنید.</p>
                     <div class="row g-2">
                         <div class="col">
-                            <a href="#"><img class="w-100" src="assets/images/app-store.svg" alt="app-store"></a>
+                            <a href="#"><img class="w-100" src=" {{Vite::image('app-store.svg')}}" alt="app-store"></a>
                         </div>
                         <div class="col">
-                            <a href="#"><img class="w-100" src="assets/images/google-play.svg" alt="google-play"></a>
+                            <a href="#"><img class="w-100" src=" {{Vite::image('google-play.svg')}}"
+                                    alt="google-play"></a>
                         </div>
                     </div>
                 </div>
@@ -1637,7 +1648,7 @@ JS libraries, plugins and custom scripts -->
                                     <span class="placeholder card-img col-12 "
                                         style="margin-top: -80px;height: 200px;"></span>
                                     <img class="card-img d-none" style="margin-top: -80px;"
-                                        src="assets/images/blog/4by3/01.jpg" alt="Card image">
+                                        src=" {{Vite::image('blog/4by3/01.jpg')}}" alt="Card image">
                                     <div class="card-img-overlay d-flex align-items-start flex-column p-3">
                                         <!-- Card overlay bottom -->
                                         <div class="w-100 mt-auto">
@@ -1668,7 +1679,7 @@ JS libraries, plugins and custom scripts -->
                                                 <div
                                                     class="placeholder-glow d-flex justify-content-center align-items-center">
                                                     <img class="avatar-img avatar-xs rounded-circle d-none"
-                                                        src="assets/images/avatar/vahid.jpeg" alt="avatar">
+                                                        src=" {{Vite::image('avatar/vahid.jpeg')}}" alt="avatar">
                                                     <span class="placeholder  placeholder-lg rounded-circle"
                                                         style="width: 40px; height: 40px;"></span>
                                                 </div>
@@ -1692,7 +1703,7 @@ JS libraries, plugins and custom scripts -->
                                 <!-- Card img -->
                                 <div class="position-relative">
                                     <img class="card-img" style="margin-top: -60px;"
-                                        src="assets/images/blog/4by3/01.jpg" alt="Card image">
+                                        src=" {{Vite::image('blog/4by3/01.jpg')}}" alt="Card image">
                                     <div class="card-img-overlay d-flex align-items-start flex-column p-3">
                                         <!-- Card overlay bottom -->
                                         <div class="w-100 mt-auto">
@@ -1723,7 +1734,7 @@ JS libraries, plugins and custom scripts -->
                                                 <div class="d-flex align-items-center position-relative">
                                                     <div class="avatar avatar-xs">
                                                         <img class="avatar-img rounded-circle"
-                                                            src="assets/images/avatar/vahid.jpeg" alt="avatar">
+                                                            src=" {{Vite::image('avatar/vahid.jpeg')}}" alt="avatar">
                                                     </div>
                                                     <span class="ms-3"><a href="#"
                                                             class="stretched-link text-reset btn-link">وحید
@@ -1743,7 +1754,7 @@ JS libraries, plugins and custom scripts -->
                                 <!-- Card img -->
                                 <div class="position-relative">
                                     <img class="card-img" style="margin-top: -60px;"
-                                        src="assets/images/blog/4by3/01.jpg" alt="Card image">
+                                        src=" {{Vite::image('blog/4by3/01.jpg')}} " alt="Card image">
                                     <div class="card-img-overlay d-flex align-items-start flex-column p-3">
                                         <!-- Card overlay bottom -->
                                         <div class="w-100 mt-auto">
@@ -1779,7 +1790,7 @@ JS libraries, plugins and custom scripts -->
                                                 <div class="d-flex align-items-center position-relative">
                                                     <div class="avatar avatar-xs">
                                                         <img class="avatar-img rounded-circle"
-                                                            src="assets/images/avatar/vahid.jpeg" alt="avatar">
+                                                            src=" {{Vite::image('avatar/vahid.jpeg')}} " alt="avatar">
                                                     </div>
                                                     <span class="ms-3"><a href="#"
                                                             class="stretched-link text-reset btn-link">وحید
@@ -1799,7 +1810,7 @@ JS libraries, plugins and custom scripts -->
                                 <!-- Card img -->
                                 <div class="position-relative">
                                     <img class="card-img" style="margin-top: -60px;"
-                                        src="assets/images/blog/4by3/01.jpg" alt="Card image">
+                                        src=" {{Vite::image('blog/4by3/01.jpg')}}" alt="Card image">
                                     <div class="card-img-overlay d-flex align-items-start flex-column p-3">
                                         <!-- Card overlay bottom -->
                                         <div class="w-100 mt-auto">
@@ -1830,7 +1841,7 @@ JS libraries, plugins and custom scripts -->
                                                 <div class="d-flex align-items-center position-relative">
                                                     <div class="avatar avatar-xs">
                                                         <img class="avatar-img rounded-circle"
-                                                            src="assets/images/avatar/vahid.jpeg" alt="avatar">
+                                                            src=" {{Vite::image('avatar/vahid.jpeg')}} " alt="avatar">
                                                     </div>
                                                     <span class="ms-3"><a href="#"
                                                             class="stretched-link text-reset btn-link">وحید
@@ -1850,7 +1861,7 @@ JS libraries, plugins and custom scripts -->
                                 <!-- Card img -->
                                 <div class="position-relative">
                                     <img class="card-img" style="margin-top: -60px;"
-                                        src="assets/images/blog/4by3/01.jpg" alt="Card image">
+                                        src=" {{Vite::image('blog/4by3/01.jpg')}} " alt="Card image">
                                     <div class="card-img-overlay d-flex align-items-start flex-column p-3">
                                         <!-- Card overlay bottom -->
                                         <div class="w-100 mt-auto">
@@ -1886,7 +1897,7 @@ JS libraries, plugins and custom scripts -->
                                                 <div class="d-flex align-items-center position-relative">
                                                     <div class="avatar avatar-xs">
                                                         <img class="avatar-img rounded-circle"
-                                                            src="assets/images/avatar/vahid.jpeg" alt="avatar">
+                                                            src=" {{Vite::image('avatar/vahid.jpeg')}} " alt="avatar">
                                                     </div>
                                                     <span class="ms-3"><a href="#"
                                                             class="stretched-link text-reset btn-link">وحید
@@ -1906,7 +1917,7 @@ JS libraries, plugins and custom scripts -->
                                 <!-- Card img -->
                                 <div class="position-relative">
                                     <img class="card-img" style="margin-top: -60px;"
-                                        src="assets/images/blog/4by3/01.jpg" alt="Card image">
+                                        src=" {{Vite::image('blog/4by3/01.jpg')}} " alt="Card image">
                                     <div class="card-img-overlay d-flex align-items-start flex-column p-3">
                                         <!-- Card overlay bottom -->
                                         <div class="w-100 mt-auto">
@@ -1940,7 +1951,7 @@ JS libraries, plugins and custom scripts -->
                                                 <div class="d-flex align-items-center position-relative">
                                                     <div class="avatar avatar-xs">
                                                         <img class="avatar-img rounded-circle"
-                                                            src="assets/images/avatar/vahid.jpeg" alt="avatar">
+                                                            src=" {{Vite::image('avatar/vahid.jpeg')}} " alt="avatar">
                                                     </div>
                                                     <span class="ms-3"><a href="#"
                                                             class="stretched-link text-reset btn-link">وحید
@@ -1982,7 +1993,7 @@ JS libraries, plugins and custom scripts -->
                                     <div class="col-sm-12 col-md-auto text-center text-md-start">
                                         <div class="avatar avatar-xxl mt-n5">
                                             <img class="avatar-img rounded-circle border border-white border-3 shadow"
-                                                src="assets/images/avatar/03.jpg" alt="">
+                                                src=" {{Vite::image('avatar/03.jpg')}} " alt="">
                                         </div>
                                     </div>
                                     <!-- Profile info -->
@@ -2048,7 +2059,7 @@ JS libraries, plugins and custom scripts -->
                                             <!-- Avatar preview -->
                                             <div class="avatar avatar-xl">
                                                 <img class="avatar-img rounded-circle border border-white border-3 shadow"
-                                                    src="assets/images/avatar/03.jpg" alt="">
+                                                    src=" {{Vite::image('avatar/03.jpg')}} " alt="">
                                             </div>
                                         </div>
                                         <!-- Avatar remove button -->
@@ -2163,6 +2174,8 @@ JS libraries, plugins and custom scripts -->
     </div>
     </div>
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+
+    <script src="  https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/min/tiny-slider.js "></script>
 </body>
 
 </html>
