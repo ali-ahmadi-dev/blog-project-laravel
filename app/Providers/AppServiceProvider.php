@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\Vite;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -36,6 +37,11 @@ class AppServiceProvider extends ServiceProvider
         Schema::defaultStringLength(191);
 
 
+        // Vite::macro('image' , fn(string $assets)=>$this->asset("resources/assets/images/{$assets}"));
+
+        Vite::macro('image', function (string $assets) {
+    return Vite::asset("resources/assets/images/{$assets}");
+});
 
 
 

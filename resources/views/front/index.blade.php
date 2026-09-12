@@ -70,10 +70,10 @@
     </script>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="assets/images/favicon.ico">
+    <link rel="shortcut icon" href="{{Vite::image('favicon.ico')}}">
 
 
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite(["resources/assets/css/app.css", "resources/assets/js/app.js"])
 
 
     <style>

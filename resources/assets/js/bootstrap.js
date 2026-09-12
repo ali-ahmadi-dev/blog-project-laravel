@@ -22,3 +22,5 @@ import "./functions.js";
 // import "./dark-theme";
 
 // import "./common/successNotification";
+
+import.meta.glob(["../assets/image/**"]);
