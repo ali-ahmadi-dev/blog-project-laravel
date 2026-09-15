@@ -7,16 +7,11 @@ import "../vendor/bootstrap/dist/js/bootstrap.bundle.min";
 // import "../vendor/tiny-slider/tiny-slider-rtl";
 // import "../vendor/sticky-js/sticky.min.js";
 
-import "./functions.js";
 // Bootstrap JS
-
+import "./functions";
 // import "../vendor/bootstrap/dist/js/bootstrap.bundle.min";
-
-// import "./functions";
-
-// import "./front/swiperSlideTrigger";
-
-// import "./front/sidebarOffCanvasMain";
+import "./front/swiperSliderTrigger";
+import "./front/sidebarOffCanvasMain";
 
 // import "./dark-theme";
 
