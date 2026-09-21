@@ -14,3 +14,17 @@ Route::group(['prefix' => 'dashboard'] , function(){
         return view('dashboard.index');
     });
 });
+
+
+
+
+//Auth Route
+
+
+Route::get('/login' , function(){
+    return view('auth.login');
+});
+
+Route::get('/register' , function(){
+    return view('auth.register');
+});
