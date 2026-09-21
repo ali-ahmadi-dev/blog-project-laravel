@@ -20,26 +20,44 @@
                                 <div class="mb-3">
                                     <label class="form-label" for="exampleInputName1">نام و نام خانوادگی</label>
                                     <input type="text" name="name"
-                                           class="form-control  @error('name') border-danger  @enderror"
+                                           class="form-control    @error('name')   border-danger       @enderror "
                                            id="exampleInputName1" 
+                                               value="{{old('name')}}"
                                            placeholder="نام و نام خانوادگی">
          
+                                            @error('name') 
+                                            
+                                            <small class="text-danger" >{{$message}}</small>
+
+                                            @enderror
                                 </div>
                                 <!-- Email -->
                                 <div class="mb-3">
                                     <label class="form-label" for="exampleInputEmail1">ایمیل</label>
                                     <input type="text" name="email"
-                                           class="form-control @error('name') border-danger  @enderror"
+                                           class="form-control  @error('email')   border-danger       @enderror "
+                                               value="{{old('email')}}"
                                            id="exampleInputEmail1"  placeholder="ایمیل">
+                                           @error('email') 
+                                            
+                                            <small class="text-danger" >{{$message}}</small>
+
+                                            @enderror
                      
                                 </div>
                                 <!-- Password -->
                                 <div class="mb-3">
                                     <label class="form-label" for="exampleInputPassword1">رمز عبور</label>
-                                    <input type="text" name="password"
-                                           class="form-control @error('name') border-danger  @enderror"
+                                    <input type="password" name="password"
+                                           class="form-control  @error('password')   border-danger       @enderror "
                                           id="exampleInputPassword1"
                                            placeholder="*********">
+
+                                           @error('password') 
+                                            
+                                            <small class="text-danger">{{$message}}</small>
+
+                                            @enderror
   
                                 </div>
 
