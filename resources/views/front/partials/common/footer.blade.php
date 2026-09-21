@@ -167,7 +167,9 @@ JS libraries, plugins and custom scripts -->
 			}
 		});
 </script> -->
-
+@error('successLogin')
+@include('notifications.successMessage')
+@enderror()
 
 </div>
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>

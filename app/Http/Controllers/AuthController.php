@@ -4,10 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\Rules\Password;
 class AuthController extends Controller
 {
-    //Register or Create User 
+    //Register or Create User
     public function register(Request $request){
         // dd($request);
 
@@ -31,12 +32,24 @@ class AuthController extends Controller
                 'password.confirmed' => 'کلمه عبور با تکرار آن برابر نیست!',
                 'password.mixed' => 'کلمه عبور باید شامل اعداد کارکتر کوچک و بزرگ و کارکترهای ويژه (!@#$%^&*) باشد!',
                 // 'g-recaptcha-response.required' => 'اعتبار سنجی گوگل ریکپچا الزامی است!'
-        
+
 
         ]);
 
 
-        User::create($fields);
+        //Create User
+           $user =  User::create($fields);
+
+        //send Mail
+
+
+        //Login User
+           Auth::login($user);
+
+        //Redirect User
+        return  redirect()->route('home')->withErrors([
+            'successLogin'=>auth()->user()->name .' عزیز خوش امدید '
+        ]);
     }
-    
+
 }
