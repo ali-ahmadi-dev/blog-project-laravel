@@ -11,22 +11,17 @@
                         <div class="rounded custom-box-shadow p-4 p-sm-5">
                             <h2>ثبت نام در سایت </h2>
                             <!-- Form START -->
-                            <form  id="registerForm" class="mt-4">
-                                @if($errors->has('g-recaptcha-response'))
-                                    <div class="alert alert-danger">
-                                    {{$errors->first('g-recaptcha-response')}}
-                                    </div>
-                                @endif
-{{--                                    @error('g-recaptcha-response')--}}
-{{--                                    <small id="emailHelp" class="form-text text-danger">{{$message}}</small>--}}
-{{--                                    @enderror--}}
+                            <form method="POST" action="{{route('register')}}"  id="registerForm" class="mt-4">
                                 @csrf
+                 
+
+                               
                                 <!-- Name -->
                                 <div class="mb-3">
                                     <label class="form-label" for="exampleInputName1">نام و نام خانوادگی</label>
                                     <input type="text" name="name"
                                            class="form-control  @error('name') border-danger  @enderror"
-                                           id="exampleInputName1" value="#"
+                                           id="exampleInputName1" 
                                            placeholder="نام و نام خانوادگی">
          
                                 </div>
@@ -35,7 +30,7 @@
                                     <label class="form-label" for="exampleInputEmail1">ایمیل</label>
                                     <input type="text" name="email"
                                            class="form-control @error('name') border-danger  @enderror"
-                                           id="exampleInputEmail1" value="#" placeholder="ایمیل">
+                                           id="exampleInputEmail1"  placeholder="ایمیل">
                      
                                 </div>
                                 <!-- Password -->
@@ -43,7 +38,7 @@
                                     <label class="form-label" for="exampleInputPassword1">رمز عبور</label>
                                     <input type="text" name="password"
                                            class="form-control @error('name') border-danger  @enderror"
-                                           value="{{old('password')}}" id="exampleInputPassword1"
+                                          id="exampleInputPassword1"
                                            placeholder="*********">
   
                                 </div>
@@ -67,13 +62,13 @@
                                 <!-- Button -->
                                 <div class="row align-items-center">
                                     <div class="col-sm-4">
-                                        {{-- <button type="submit" class="g-recaptcha btn btn-success"
+                                        <button type="submit" class="g-recaptcha btn btn-success"
                                                 data-sitekey="{{config('services.google_recaptcha_v3.siteKey')}}"
                                                 data-callback='onSubmit'
                                                 data-action='submitRegister'
 
                                         >ثبت نام
-                                        </button> --}}
+                                        </button>
                                     </div>
 
                                 </div>
