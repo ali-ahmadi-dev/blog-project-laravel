@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\WelcomMail;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Validation\Rules\Password;
 class AuthController extends Controller
 {
@@ -44,11 +46,18 @@ class AuthController extends Controller
 
 
         //Login User
-           Auth::login($user);
+
+         if($user){
+               Auth::login($user);
+               Mail::to($request->email)->send(new WelcomMail(Auth::user(),$request->password));
+               
+         } else{
+                    return  redirect()->back()->with('error',' مشکلی پیش امده');
+         } 
 
         //Redirect User
         return  redirect()->route('home')->withErrors([
-            'successLogin'=>auth()->user()->name .' عزیز خوش امدید '
+             'successLogin' => 'عزیز خوش آمدید ' . Auth::user()->name
         ]);
     }
 

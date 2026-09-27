@@ -171,6 +171,10 @@ JS libraries, plugins and custom scripts -->
 @include('notifications.successMessage')
 @enderror()
 
+@if(session()->has('error'))
+@include('notifications.errorMessage')
+@endif
+
 </div>
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 
