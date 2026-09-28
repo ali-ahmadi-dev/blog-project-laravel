@@ -81,7 +81,7 @@
                                 <div class="row align-items-center">
                                     <div class="col-sm-4">
                                         <button type="submit" class="g-recaptcha btn btn-success"
-                                                data-sitekey="{{config('services.google_recaptcha_v3.siteKey')}}"
+                                                 data-sitekey="{{ config('services.google_recaptcha_v3.site_key') }}"
                                                 data-callback='onSubmit'
                                                 data-action='submitRegister'
 

@@ -9,6 +9,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="Blogzine">
     <meta name="description" content="قالب وبلاگ و مجله خبری مبتنی بر بوت استرپ">
+     <script src="https://www.google.com/recaptcha/api.js"></script>
+            <script>
+                    function onSubmit(token) {
+                        document.getElementById("registerForm").submit();
+                    }
+        </script>
+
 
     <!-- Dark mode -->
     <script>
