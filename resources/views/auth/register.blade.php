@@ -12,6 +12,22 @@
                             <h2>ثبت نام در سایت </h2>
                             <!-- Form START -->
                             <form method="POST" action="{{route('register')}}"  id="registerForm" class="mt-4">
+
+
+                                @if ($errors->has('g-recaptcha-response'))
+                                    <div class="alert alert-danger" >
+                                        <ul class="list-group">
+
+                                   
+                                              <i class="list-item">
+                                                {{$errors->first('g-recaptcha-response')}}</i>  
+                                        
+                                        </ul>
+                                    </div>
+                                @endif
+
+
+
                                 @csrf
                  
 
