@@ -57,6 +57,13 @@
                             مقالات</a></li>
                     <li class="nav-item my-1 bg-light"><a class="nav-link" style="font-size: 17px;" href="">مدیریت
                             دیدگاه ها</a></li>
+
+                <form method="post" action="{{route('logout')}}">
+                        @csrf
+                        <li class="nav-item my-1 bg-light">
+                            <button type="submit" class="nav-link bg-transparent border-0 text-danger">خروج</button>
+                        </li>
+                    </form>
                 </ul>
             </div>
         </div>

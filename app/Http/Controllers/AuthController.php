@@ -19,7 +19,7 @@ class AuthController extends Controller
             'name' => ['required' , 'max:255'],
             'email' => ['required' , 'max:255' , 'email' , 'unique:users'  ],
             'password' => ['required' , 'confirmed' , Password::min(8)->max(12)->mixedCase()->letters()->numbers()->symbols()  ],
-            'g-recaptcha-response' => ['required' , new GoogleCaptchaV3('submitRegister')]
+            // 'g-recaptcha-response' => ['required' , new GoogleCaptchaV3('submitRegister' , minScore:0.5)]
 
         ],
         [
@@ -36,7 +36,7 @@ class AuthController extends Controller
                 'password.max' => 'کلمه عبور باید حداکثر 12 کارکتر باشد!',
                 'password.confirmed' => 'کلمه عبور با تکرار آن برابر نیست!',
                 'password.mixed' => 'کلمه عبور باید شامل اعداد کارکتر کوچک و بزرگ و کارکترهای ويژه (!@#$%^&*) باشد!',
-                'g-recaptcha-response.required' => 'اعتبار سنجی گوگل ریکپچا الزامی است!'
+                // 'g-recaptcha-response.required' => 'اعتبار سنجی گوگل ریکپچا الزامی است!'
 
 
         ]);
@@ -63,5 +63,68 @@ class AuthController extends Controller
              'successLogin' => 'عزیز خوش آمدید ' . Auth::user()->name
         ]);
     }
+
+
+
+
+
+
+    //Login 
+
+
+    public function login(Request $request){
+        // dd($request);
+
+        $credentials =  $request->validate([
+            'email' => ['required' ],
+            'password' => ['required'],
+ 
+        ],
+        [
+
+                   'email.email' => 'ایمیل معتبر وارد نمایید!',
+                'email.required' => 'ایمیل معتبر خود را وارد نمایید!',
+                'password.required' => 'کلمه عبور خود را وارد نمایید!',
+
+        ]);
+
+
+
+    
+
+        if (Auth::attempt( $credentials ,$request->remember)) {
+          
+
+        $request->session()->regenerate();
+        return redirect()->route('home')->withErrors([
+            'success' => auth()->user()->name . 'خوش آمدید',
+        ]);
+        
+
+            
+        }else{
+            return redirect()->back()->with('error' , 'کلمه عبور یا رمز اشتباه هستش ');
+        }
+
+        
+
+
+    }
+
+
+
+
+    //logout
+
+    public function logout(Request $request){
+        Auth::logout();
+       $request->session()->invalidate();
+       $request->session()->regenerateToken();
+
+         return redirect()->route('home')->withErrors(['success' => 'به امید دیدار مجدد شما']);
+    }
+
+
+
 
 }

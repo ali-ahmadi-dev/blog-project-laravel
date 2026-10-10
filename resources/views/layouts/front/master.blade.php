@@ -1,9 +1,17 @@
 @include('front.partials.common.header')
+
+@auth()
 @include('front.partials.common.sidebarOffCanvasMain')
+@endauth
+
 @include('front.partials.common.topNav')
 @yield('content')
+
+@auth()
 @include('front.partials.common.profile')
 @include('front.partials.common.bookmark')
+@endauth
+
 @include('front.partials.common.bottomNav')
 @include('front.partials.common.footer')
 

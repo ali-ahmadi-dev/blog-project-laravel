@@ -90,7 +90,7 @@
                                         <label class="form-check-label" for="subscribe">عضویت در خبرنامه</label>
                                     </div>
                                     <div class="text-sm-end">
-                                        <span>آیا قبلا ثبت نام کرده اید؟ <a href="#"><u>ورود</u></a></span>
+                                        <span>آیا قبلا ثبت نام کرده اید؟ <a href="{{route('login')}}"><u>ورود</u></a></span>
                                     </div>
                                     </div>
                                 <!-- Button -->

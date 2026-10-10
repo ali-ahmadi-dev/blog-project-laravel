@@ -144,10 +144,22 @@ TopNav START -->
 
                 <!-- Offcanvas menu toggler -->
                 <div class="nav-item align-self-end">
+                    @auth()
+                        
+                  
                     <a class="nav-link p-0" id="openedSidebar" data-bs-toggle="offcanvas" href="#offcanvasMenu"
                         role="button" aria-controls="offcanvasMenu">
                         <i class="bi bi-text-right rtl-flip fs-2" data-bs-target="#offcanvasMenu"> </i>
                     </a>
+  @endauth
+
+
+  @guest()
+                      <a href="{{route('login')}}" class="btn btn-success btn-sm">ورود</a>
+                      <a href="{{route('register')}}" class="btn btn-outline-primary btn-sm">ثبت نام</a>
+@endguest
+
+
                 </div>
             </div>
             <!-- Nav right END -->

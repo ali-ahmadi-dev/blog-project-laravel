@@ -167,7 +167,7 @@ JS libraries, plugins and custom scripts -->
 			}
 		});
 </script> -->
-@error('successLogin')
+@error('success')
 @include('notifications.successMessage')
 @enderror()
 

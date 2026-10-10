@@ -12,8 +12,8 @@
                         <div class="p-4 p-sm-5  rounded custom-box-shadow">
                             <h2>ورود به حساب کاربری</h2>
                             <!-- Form START -->
-                            <form  class="mt-4">
-
+                            <form method="POST" action="{{route('login')}}"  class="mt-4">
+                                  @csrf
                                 <!-- Email -->
                                 <div class="mb-3">
                                     <label class="form-label" for="exampleInputEmail1">ایمیل</label>
@@ -39,7 +39,7 @@
                                         </button>
                                     </div>
                                     <div class="col-sm-8 text-sm-end">
-                                        <span>آیا هنوز ثبت نام نکرده اید؟ <a href="#"><u>ثبت نام</u></a></span>
+                                        <span>آیا هنوز ثبت نام نکرده اید؟ <a href="{{route('register')}}"><u>ثبت نام</u></a></span>
                                     </div>
                                 </div>
                             </form>
